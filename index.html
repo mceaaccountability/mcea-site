@@ -15,9 +15,9 @@
             padding: 20px;
             box-sizing: border-box;
             
-            /* Clean, professional styling */
-            background-color: #fafafa; 
-            color: #2c2c2c; 
+            /* Dark styling */
+            background-color: #000000; 
+            color: #ffffff; 
             font-family: 'Georgia', 'Times New Roman', serif; 
         }
         .content {
@@ -25,6 +25,21 @@
             text-align: center;
             line-height: 1.8;
             font-size: 1.25rem;
+        }
+        .hidden {
+            /* Hides the text by matching the background color exactly */
+            color: #000000;
+            position: absolute;
+            bottom: 30px;
+            font-size: 1rem;
+            /* Prevents the cursor from changing to a text selector unless they are dragging */
+            cursor: default; 
+        }
+        
+        /* Optional: Makes the highlight effect look sharp if someone highlights the hidden text */
+        ::selection {
+            background-color: #ffffff;
+            color: #000000;
         }
     </style>
 </head>
@@ -38,6 +53,11 @@
             What was spent remains spent. What was signed remains signed. And what was moved from one place to another has a way of leaving a trail.<br><br>
             Eventually, someone follows it.
         </p>
+    </div>
+    
+    <!-- at the bottom of the page -->
+    <div class="hidden">
+        You will be held accountable.
     </div>
 </body>
 </html>
