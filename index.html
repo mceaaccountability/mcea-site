@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accountability</title>
     
-    <!-- Imports a beautiful, classic Garamond font that works on all devices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -20,23 +19,19 @@
             padding: 20px;
             box-sizing: border-box;
             
-            /* Dark grey to black radial fade */
-            background-color: #000000; 
-            background: radial-gradient(circle, #1e1e1e 0%, #000000 85%);
+            /* Light gray to dark gray radial fade */
+            background-color: #888888; 
+            background: radial-gradient(circle, #e8e8e8 0%, #888888 100%);
             
-            color: #ffffff; 
-            /* Uses the imported Garamond, with Apple Garamond and standard Garamond as backups */
+            color: #0a0a0a; 
             font-family: 'EB Garamond', 'Apple Garamond', Garamond, Baskerville, serif; 
         }
         .content {
             max-width: 700px;
             text-align: center;
             line-height: 2;
-            /* Increased slightly because Garamond runs a bit smaller */
             font-size: 1.45rem; 
             letter-spacing: 0.5px;
-            /* Adds a very subtle drop shadow to make the text pop against the fade */
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
         }
         .hidden {
             /* Uses transparency so it perfectly blends into the gradient */
@@ -48,13 +43,11 @@
             letter-spacing: 1px;
         }
         
-        /* Reveals the hidden text when highlighted */
+        /* Inverts the highlight effect for the new color scheme */
         ::selection {
-            background-color: #ffffff;
-            /* Ensures highlighted text is visible */
-            color: #000000; 
-            /* Overrides the transparent color when selected */
-            -webkit-text-fill-color: #000000; 
+            background-color: #000000;
+            color: #ffffff; 
+            -webkit-text-fill-color: #ffffff; 
         }
     </style>
 </head>
