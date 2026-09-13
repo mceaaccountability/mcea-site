@@ -6,7 +6,6 @@
     <title>Accountability</title>
     <style>
         body {
-            /* Centers the content both vertically and horizontally */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,47 +14,54 @@
             padding: 20px;
             box-sizing: border-box;
             
-            /* Dark styling */
+            /* Dark grey to black radial fade */
             background-color: #000000; 
+            background: radial-gradient(circle, #1e1e1e 0%, #000000 85%);
+            
             color: #ffffff; 
             font-family: 'Georgia', 'Times New Roman', serif; 
         }
         .content {
-            max-width: 650px;
+            max-width: 700px;
             text-align: center;
-            line-height: 1.8;
+            line-height: 2;
             font-size: 1.25rem;
+            letter-spacing: 0.5px;
+            /* Adds a very subtle drop shadow to make the text pop against the fade */
+            text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
         }
         .hidden {
-            /* Hides the text by matching the background color exactly */
-            color: #000000;
+            /* Uses transparency so it perfectly blends into the gradient */
+            color: transparent;
             position: absolute;
             bottom: 30px;
             font-size: 1rem;
-            /* Prevents the cursor from changing to a text selector unless they are dragging */
             cursor: default; 
+            letter-spacing: 1px;
         }
         
-        /* Optional: Makes the highlight effect look sharp if someone highlights the hidden text */
+        /* Reveals the hidden text when highlighted */
         ::selection {
             background-color: #ffffff;
-            color: #000000;
+            /* Ensures highlighted text is visible */
+            color: #000000; 
+            /* Overrides the transparent color when selected */
+            -webkit-text-fill-color: #000000; 
         }
     </style>
 </head>
 <body>
     <div class="content">
         <p>
-            Have you ever seen so many people people fight so hard to keep an unpaid volunteer postiont?<br><br>
-            Things get forgotten. Records get erased. People move on.<br><br>
-            Foundations and trust get broken.<br><br>
-            Numbers, however, have a longer memory.<br><br>
-            What was spent remains spent. What was signed remains signed. And what was moved from one place to another has a way of leaving a trail.<br><br>
+            Have you ever seen people fight so fiercely to keep an unpaid volunteer position?<br><br>
+            It relies on a quiet hope: that things get forgotten. That records are erased. That people eventually move on.<br><br>
+            That broken trust stays buried.<br><br>
+            Numbers, however, possess a cold, unforgiving memory.<br><br>
+            What was spent remains spent. What was signed remains signed. And what was quietly moved from one place to another leaves an undeniable trail.<br><br>
             Eventually, someone follows it.
         </p>
     </div>
     
-    <!-- at the bottom of the page -->
     <div class="hidden">
         You will be held accountable.
     </div>
