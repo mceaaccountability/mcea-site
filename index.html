@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accountability</title>
+    
+    <!-- Imports a beautiful, classic Garamond font that works on all devices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
     <style>
         body {
             display: flex;
@@ -19,13 +25,15 @@
             background: radial-gradient(circle, #1e1e1e 0%, #000000 85%);
             
             color: #ffffff; 
-            font-family: 'Georgia', 'Times New Roman', serif; 
+            /* Uses the imported Garamond, with Apple Garamond and standard Garamond as backups */
+            font-family: 'EB Garamond', 'Apple Garamond', Garamond, Baskerville, serif; 
         }
         .content {
             max-width: 700px;
             text-align: center;
             line-height: 2;
-            font-size: 1.25rem;
+            /* Increased slightly because Garamond runs a bit smaller */
+            font-size: 1.45rem; 
             letter-spacing: 0.5px;
             /* Adds a very subtle drop shadow to make the text pop against the fade */
             text-shadow: 0px 2px 4px rgba(0,0,0,0.8);
@@ -35,7 +43,7 @@
             color: transparent;
             position: absolute;
             bottom: 30px;
-            font-size: 1rem;
+            font-size: 1.1rem;
             cursor: default; 
             letter-spacing: 1px;
         }
