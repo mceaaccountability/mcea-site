@@ -10,40 +10,65 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px;
-            box-sizing: border-box;
+            padding: 24px;
             
-            /* Light gray to dark gray radial fade */
+            /* Radial background gradient */
             background-color: #888888; 
             background: radial-gradient(circle, #e8e8e8 0%, #888888 100%);
             
             color: #0a0a0a; 
             font-family: 'EB Garamond', 'Apple Garamond', Garamond, Baskerville, serif; 
+            overflow: hidden;
         }
         .content {
-            max-width: 700px;
+            max-width: 620px;
             text-align: center;
-            line-height: 2;
-            font-size: 1.45rem; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+        .statement {
+            font-size: 1.6rem;
+            line-height: 1.5;
             letter-spacing: 0.5px;
+            margin: 0;
+        }
+        .btn-survey {
+            display: inline-block;
+            font-family: 'EB Garamond', serif;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+            color: #ffffff;
+            background-color: #0a0a0a;
+            border: 1px solid #0a0a0a;
+            padding: 12px 32px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-survey:hover {
+            background-color: transparent;
+            color: #0a0a0a;
         }
         .hidden {
-            /* Uses transparency so it perfectly blends into the gradient */
             color: transparent;
             position: absolute;
-            bottom: 30px;
-            font-size: 1.1rem;
+            bottom: 24px;
+            font-size: 1rem;
             cursor: default; 
             letter-spacing: 1px;
+            user-select: none;
         }
-        
-        /* Inverts the highlight effect for the new color scheme */
         ::selection {
             background-color: #000000;
             color: #ffffff; 
@@ -52,19 +77,16 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <p>
-            Have you ever seen people fight so fiercely to keep an unpaid volunteer position?<br><br>
-            Have you ever seen such enabling of blatant wrong doing?<br><br>
-            What qualifies as a misappropriation of public funds?<br><br>
-            This relies on a quiet hope: that things get forgotten. That records are not maintained. That people eventually move on.<br><br>
-            That private meetings and broken trust stay buried.<br><br>
-            Numbers, however, possess a cold, unforgiving memory.<br><br>
-            What was spent remains spent. What was signed remains signed. There is no expectation of privacy in today's world.<br><br>
-            What was quietly decided leaves an undeniable trail.<br><br>
-            Eventually, someone follows it.
+    <main class="content">
+        <p class="statement">
+            Quiet decisions leave an undeniable trail.<br>
+            Numbers possess a cold, unforgiving memory.
         </p>
-    </div>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSea3GUtWDiKf649b9q99i9nwxiRiSgN5wQMOX9N3ZwUhRsbTA/viewform?usp=header" target="_self" class="btn-survey">
+            Take Survey
+        </a>
+    </main>
     
     <div class="hidden">
         You will be held accountable.
